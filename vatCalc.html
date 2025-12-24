@@ -2,14 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>VAT Calculator</title>
 </head>
 <body>
     <script>
-        const initialValue = 75; //Creates a variable and sets the value to 75
-        const vatAmount = initialValue * 0.20; //Creates a variable and sets this to the value of initialValue multiplied by 0.20
-        let withVat = initialValue + vatAmount; //Creates a variable and sets the value to the result of adding the values saved in initialValue and vatAmount
-        console.log(`the VAT amount is £${vatAmount} and The total amount including VAT is £${withVat}`); //prints a staement to the console with a string containing the value of vatAmount and withVat
+        const vatCalc = (initialAmount) => { //creates an arrow function taking in a variable as the parameter
+            const vatAmount = initialAmount * 0.2; //Creates a variable and sets this to the value of initialValue multiplied by 0.20
+            let withVat = initialAmount + vatAmount; //Creates a variable and sets the value to the result of adding the values saved in initialValue and vatAmount
+            console.log(`the VAT amount is £${vatAmount} and The total amount including VAT is £${withVat}`); //prints a statement to the console with a string containing the value of vatAmount and withVat
+        };
+        
+        vatCalc(75); //calls the function and uses the parameter 75 to test the function works
     </script>
 </body>
 </html>
